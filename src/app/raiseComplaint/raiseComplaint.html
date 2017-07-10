@@ -1,0 +1,52 @@
+<section class="notice">
+    <div class="commonHeading">
+        <h1> Complain Board</h1>
+        <h2></h2>
+    </div>
+    <!--<pre>{{formDetails | json}}</pre>-->
+    <section class="notice__container">
+        <form (ngSubmit)="onSubmit()">
+            <div class="notice__fields">
+                <label>Enter Complain Title:</label>
+                <input type="text" placeholder="Enter notice title" name="title" [(ngModel)]="formDetails.complaint_title" required>
+            </div>
+            <div class="notice__fields">
+                <label>Enter Complain Details:</label>
+                <textarea type="text" placeholder="Enter describtion" name="content" [(ngModel)]="formDetails.complaint_text" required></textarea>
+            </div>
+            <div class="notice__action">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+        <div class="notice__view">
+            <h1>My Raised Complaint's</h1>
+            <!--<pre>{{myComplaint | json}}</pre>-->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" *ngFor="let each of myComplaint">
+                    <div class="notice__view--box">
+                        <div class="notice__view--fields">
+                            <label>Complain ID :</label>
+                            <h1>{{each.complaint_id}}</h1>
+                        </div>
+                        <div class="notice__view--fields">
+                            <label>Raised Date :</label>
+                            <h1>{{each.complaint_date}}</h1>
+                        </div>
+                        <div class="notice__view--fields">
+                            <label>Complain Title :</label>
+                            <h1>{{each.complaint_id}}</h1>
+                        </div>
+                        <div class="notice__view--fields">
+                            <label>Complain Content :</label>
+                            <h1>{{each.complaint_text}}</h1>
+                        </div>
+                        <div class="notice__view--fields">
+                            <label>Complain Status :</label>
+                            <h1>{{each.complaint_status}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

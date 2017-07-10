@@ -1,0 +1,40 @@
+<section class="paymaintance">
+    <div class="commonHeading">
+        <h1>Monthly Maintance</h1>
+        <h2></h2>
+    </div>
+    <!--<pre>{{maintanceDetails | json}}</pre>-->
+    <section class="paymaintance__container">
+
+        <div class="paymaintance__box row" *ngFor="let each of maintanceDetails">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paymaintance__box--each">
+                <div>
+                    <label>Name :</label>
+                    <h1>{{each.owner_name}}</h1>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paymaintance__box--each">
+                <div>
+                    <label>Month :</label>
+                    <h1>{{each.created_date | date}}</h1>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paymaintance__box--each text-left">
+                <div *ngIf="each.payment_status === 'PENDING'">
+                    <label>Status :</label>
+                    <button (click)="makePayment(each.maintenance_id)">PAY {{each.maintenance_amount}}</button>
+                </div>
+                <div *ngIf="each.payment_status === 'PAID'">
+                    <label>Status :</label>
+                    <h1>PAID</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</section>

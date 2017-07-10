@@ -1,0 +1,57 @@
+:host {
+    /deep/ {
+        * {
+            box-sizing: border-box;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+        table {
+            line-height: 1.5em;
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: table;
+            width: 100%;
+            max-width: 100%;
+            overflow: auto;
+            word-break: normal;
+            word-break: keep-all;
+            tr {
+                th {
+                    font-weight: 300 !important;
+                    font-size: 12px !important;
+                    text-transform: uppercase;
+                }
+                section {
+                    font-size: 12px;
+                    // font-weight: bold;
+                }
+                td,
+                th {
+                    font-weight: 300 !important;
+                    font-size: 12px !important;
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding: 0.5em 1em;
+                    border: 1px solid #999;
+                    @media only screen and (min-width: 320px) and (max-width: 768px) {
+                        font-size: 10px !important;
+                    }
+                }
+            }
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

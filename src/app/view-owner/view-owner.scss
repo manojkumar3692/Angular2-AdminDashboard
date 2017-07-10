@@ -1,0 +1,10 @@
+@import '../../assets/css/_attribute.scss';
+@import '../../assets/css/_table.scss';
+.viewOwner {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+}

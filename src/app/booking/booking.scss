@@ -1,0 +1,32 @@
+@import '../../assets/css/_attribute.scss';
+.booking {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__box {
+        &--outline {
+            border: 1px solid $primaryColor;
+            text-align: left;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            ul {
+                li {
+                    h1 {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                    h2 {
+                        font-size: 14px;
+                        display: inline-block;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        &--status {
+            text-align: center;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+    }
+}

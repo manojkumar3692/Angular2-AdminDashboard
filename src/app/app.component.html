@@ -1,0 +1,86 @@
+<app-parking-header (onToggle)="onToggle($event)"></app-parking-header>
+<section class="hero row">
+    <section class="col-lg-2 col-md-2 col-sm-12 col-xs-12 navigation noPadding" *ngIf="roleID === 'ADMIN' || roleID === 'RESIDENT'" [ngClass]="{'activeMenu' : toggleState}">
+
+        <div>
+            <div class="navigation__profile text-center" *ngIf="roleID === 'ADMIN' || roleID === 'RESIDENT'">
+                <!--<img class="navigation__profile--circle" src="../assets/images/profile.jpg" />-->
+                <i class="fa fa-user navigation__profile--circle" [ngClass]="{'adminImage': roleID === 'ADMIN'}"></i>
+                <h1>{{residentID}}</h1>
+                <h2>{{roleID}}</h2>
+
+            </div>
+            <ul *ngIf="roleID === 'ADMIN'" class="row sidenav">
+
+                <li (click)="onToggle()" routerLink="/dashboard" routerLinkActive="nav-active-link-admin">
+                    <a><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/viewOwner" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-users" aria-hidden="true"></i>View Owners</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/createOwner" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-user-plus" aria-hidden="true"></i>Create Owners</a>
+
+                </li>
+                <!--<li (click)="onToggle()"><a><i class="fa fa-line-chart" aria-hidden="true"></i>Live Booking</a>
+
+                </li>-->
+                <li (click)="onToggle()" routerLink="/maintance" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-money" aria-hidden="true"></i>Maintance</a>
+
+                </li>
+
+                <li routerLink="/amenitiesrequest" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-bell-o" aria-hidden="true"></i>View Request</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/viewComplaint" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-flag-checkered" aria-hidden="true"></i>Complaints</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/notice" routerLinkActive="nav-active-link-admin"><a><i class="fa fa-commenting-o" aria-hidden="true"></i>Notice Board</a>
+
+                </li>
+                <!--<li routerLink="/myparking" routerLinkActive="nav-active-link"><a><i class="fa fa-map-marker" aria-hidden="true"></i>My Parking</a>
+
+            </li>-->
+
+            </ul>
+
+            <ul *ngIf="roleID === 'RESIDENT'">
+
+                <li (click)="onToggle()" routerLink="/myparking" routerLinkActive="nav-active-link"><a><i class="fa fa-map-marker" aria-hidden="true"></i>My Parking</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/search" routerLinkActive="nav-active-link"><a><i class="fa fa-search" aria-hidden="true"></i>Search</a>
+
+                </li>
+                <li routerLink="/booking" routerLinkActive="nav-active-link"><a><i class="fa fa-star" aria-hidden="true"></i>My Booking</a>
+
+                </li>
+                <li routerLink="/amenities" routerLinkActive="nav-active-link"><a><i class="fa fa-tripadvisor" aria-hidden="true"></i>amenities</a>
+
+                </li>
+
+                <li routerLink="/paymaintance" routerLinkActive="nav-active-link"><a><i class="fa fa-money" aria-hidden="true"></i>Pay Maintance</a>
+
+                </li>
+                <li (click)="onToggle()"><a><i class="fa fa-bell-o" aria-hidden="true"></i>Request</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/raiseComplaint" routerLinkActive="nav-active-link"><a><i class="fa fa-flag-checkered" aria-hidden="true"></i>Complaints</a>
+
+                </li>
+                <li (click)="onToggle()" routerLink="/noticeView" routerLinkActive="nav-active-link"><a><i class="fa fa-commenting-o" aria-hidden="true"></i>Notice Board</a>
+
+                </li>
+
+
+
+            </ul>
+        </div>
+    </section>
+    <section class="col-lg-10 col-md-10 col-sm-12 col-xs-12" [ngClass]="{'try': roleID === 'anonymous'}">
+
+        <router-outlet></router-outlet>
+    </section>
+
+</section>
+<app-parking-footer></app-parking-footer>

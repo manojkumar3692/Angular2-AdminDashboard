@@ -1,0 +1,32 @@
+@import '../../assets/css/_attribute.scss';
+@import '../view-owner/view-owner.scss';
+@import '../dashboard/dashboard.scss';
+.success {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__container {
+        padding: 0rem 1rem;
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            color: $primaryColor;
+        }
+        p {
+            padding: 2rem 0;
+            text-align: center;
+        }
+        h2 {
+            padding: 2rem 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+}
+
+.modal-header .commonHeadingAdmin {
+    padding: 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}

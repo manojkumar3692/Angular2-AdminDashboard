@@ -1,0 +1,30 @@
+<section class="booking">
+    <div class="commonHeading">
+        <h1>MY Booking</h1>
+        <h2></h2>
+    </div>
+
+    <div class="booking__container row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 search__box" *ngFor="let book of bookingDetails;let i = index;">
+            <div class="booking__box--outline">
+                <ul>
+                    <li>
+                        <h1>Parking Number :</h1>
+                        <h2>{{book.slotNumber}}</h2>
+                    </li>
+                    <li>
+                        <h1>Date :</h1>
+                        <h2>{{book.availabilityDate | date}}</h2>
+                    </li>
+                    <li>
+                        <h1>Parking Type :</h1>
+                        <h2>{{book.parkingType}}</h2>
+                    </li>
+                </ul>
+                <div class="search__box--status">
+                    <h1>{{book.availabilityStatus}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

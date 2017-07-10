@@ -1,0 +1,20 @@
+<section class="login">
+    <div class="login__container">
+        <div class="login__userImage">
+            <img src="../../assets/images/samplelogo.png" />
+        </div>
+        <form (ngSubmit)="loginUser(login)" #login="ngForm">
+            <div class="login__container--fields">
+                <label>Enter you resident ID</label>
+                <input placeholder="enter resident ID" ngModel name="residentID" #residentID="ngModel">
+            </div>
+            <div class="login__container--fields">
+                <label>Enter your password</label>
+                <input placeholder="enter password" type="password" ngModel name="password" #password="ngModel">
+            </div>
+            <div class="login__action">
+                <button>Login</button>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+<section class="dashboard">
+
+    <section class="dashboard__metric row">
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <div class="dashboard__box--color">
+                </div>
+                <h1>150</h1>
+                <h2>Total Owners</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>05</h1>
+                <h2>Total Complaints</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>12</h1>
+                <h2>Total Request</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>21,000</h1>
+                <h2>Total Payment</h2>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="dashboard__subHeading">
+        <h1>Payment vs Service</h1>
+    </div>
+    <div class="dashboard__map">
+        <!--<base-chart class="chart" [datasets]="datasets" [labels]="labels" [options]="options" [chartType]="'line'">
+        </base-chart>-->
+
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+
+    <div class="dashboard__subHeading">
+        <h1>Revenue VS Complaints</h1>
+    </div>
+
+    <div class="dashboard__map row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas> </div>
+    </div>
+
+</section>

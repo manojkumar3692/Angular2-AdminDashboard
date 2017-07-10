@@ -1,0 +1,33 @@
+@import '../../assets/css/_attribute.scss';
+.amenitiesRequest {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__container {
+        &--separate {
+            margin-bottom: 20px;
+        }
+    }
+    &__box {
+        padding: 1rem;
+        border: 1px solid #eb7475;
+        &--fields {
+            margin-bottom: 10px;
+            label {
+                font-size: 12px;
+                margin: 0;
+                display: inline-block
+            }
+            h1 {
+                font-size: 14px;
+                margin: 10px 0px 8px;
+                text-transform: uppercase;
+                display: inline-block
+            }
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    padding: 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}

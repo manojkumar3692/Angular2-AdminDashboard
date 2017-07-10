@@ -1,0 +1,96 @@
+@import '../../assets/css/attribute';
+
+
+.register {
+    padding: 0rem 2rem;
+     font-family: 'Montserrat', sans-serif;
+    &__container {
+        input {
+            border: 1px solid #dcdcdc !important;
+            outline: none;
+            padding: 5px 0px 5px 5px;
+            border-radius: 5px;
+             color: #54667a;
+              font-size: 12px;
+              width:100%;
+              margin-bottom: 1rem;
+              height: 35px;
+        }
+        label {
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+        ::-webkit-input-placeholder {
+            color: #999;
+            text-transform: lowercase;
+            font-size: 12px;
+        }
+    }
+   
+    &__parking {
+       
+    }
+    &__parkingContainer {
+        &--box {
+            position: relative;
+            padding:10px;
+            border: 1px solid #35495e;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            select {
+                width:100%;
+                border: 1px solid #dcdcdc;
+                background-color: inherit;
+                height: 30px;
+                font-size: 12px;
+                font-weight: 300;
+                margin-bottom: 10px;
+                 border-radius: 5px;
+            }
+            input {
+                width:100%;
+                 border: 1px solid #dcdcdc;
+                 height: 30px;
+                  font-size: 12px;
+                font-weight: 300;
+                padding-left: 5px;
+                 border-radius: 5px;
+            }
+             label {
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+        }
+        &--close {
+            position: absolute;
+               right: 12px;
+    top: 4px;
+        i {
+            color: $primaryColor;
+        }
+        }
+        &--add {
+            width:100%;
+            padding: 1rem 0px 2rem;
+            text-align: center;
+            button {
+                height: 35px;
+                font-size: 10px;
+                font-weight: 500;
+                text-transform: uppercase;
+                background-color: #fff;
+                color: #35495e;
+                outline: none;
+                border: 1px solid #dcdcdc;
+                border-radius: 15px;
+                width: 100px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    border: none;
+                }
+            }
+        }
+    }
+}

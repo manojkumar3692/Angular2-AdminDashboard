@@ -1,0 +1,61 @@
+<section class="register">
+    <!--{{myForm.value.name | json}}-->
+    <!--{{selectedOwner | json}}-->
+    <div class="commonHeading">
+        <h1>Edit a owner</h1>
+        <h2></h2>
+    </div>
+    <form [formGroup]="myForm" novalidate autocomplete="off">
+        <div class="register__container row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Flat No :</label>
+                <input placeholder="enter Flat Number" formControlName="flatNo">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Block Name :</label>
+                <input placeholder="enter block Name" formControlName="blockNo">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Name :</label>
+                <input placeholder="enter your Name" formControlName="name">
+            </div>
+            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components ">
+                <label>Number :</label>
+                <input placeholder="enter your number" formControlName="phoneNumber">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components ">
+                <label>Resident Id :</label>
+                <input placeholder="enter your resident ID" formControlName="residentID">
+            </div>
+        </div>
+        <div class="commonHeading ">
+            <h1>parking slot</h1>
+            <h2></h2>
+        </div>
+
+        <div>
+
+        </div>
+
+
+    </form>
+
+    <div class="register__parking row ">
+        <div class="register__parkingContainer col-lg-4 col-md-4 col-sm-6 col-xs-12 " *ngFor="let item of selectedOwner[0]?.parkingSlots;let in = index;">
+
+            <div class="register__parkingContainer--box ">
+                <label>Parking Type :</label>
+                <select name="parkingType" [(ngModel)]="selectedOwner[0].parkingSlots[in].parkingType">
+                         <option selected="{{item.parkingSlots}}">Open</option>
+                <option>Closed</option>
+            </select>
+                <label>Parking No :</label>
+                <input type="text" placeholder="enter parking slot Number" [(ngModel)]="selectedOwner[0].parkingSlots[in].slotNumber">
+            </div>
+        </div>
+    </div>
+    <div class="register__parkingContainer--add">
+        <button type="submit" (click)="saveOwner()">SAVE</button>
+    </div>
+</section>

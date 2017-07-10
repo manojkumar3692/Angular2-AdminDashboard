@@ -1,0 +1,22 @@
+<section class="notice">
+    <div class="commonHeadingAdmin">
+        <h1>View Notice Board</h1>
+        <h2></h2>
+    </div>
+    <section class="notice__container">
+        <!--<pre>{{formDetails | json}}</pre>-->
+        <form (ngSubmit)="onSubmit();form.reset()" #form="ngForm">
+            <div class="notice__fields">
+                <label>Enter Notice Title:</label>
+                <input type="text" placeholder="Enter notice title" name="title" [(ngModel)]="formDetails.announcement_title" required>
+            </div>
+            <div class="notice__fields">
+                <label>Enter Content:</label>
+                <textarea type="text" placeholder="Enter describtion" name="content" [(ngModel)]="formDetails.announcement_content" required></textarea>
+            </div>
+            <div class="notice__action">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </section>
+</section>

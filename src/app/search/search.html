@@ -1,0 +1,73 @@
+<section class="search">
+    <div class="commonHeading">
+        <h1>Available Parking Slots</h1>
+        <h2></h2>
+    </div>
+
+    <div class="search__container row">
+        <div class="search__action">
+            <button type="button" (click)="selectDate('today')" [ngClass]="{'activeDate': date.day === 'today'}">Today</button>
+            <button type="button" (click)="selectDate('tomorrow')" [ngClass]="{'activeDate': date.day === 'tomorrow'}">Tomorrow</button>
+        </div>
+        <div class="loadText" *ngIf="status === true">Loading ..</div>
+        <div class="loadText" *ngIf="parkingSlots?.length === 0 && status === false">No Parking Slots Available</div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 search__box" *ngFor="let slot of parkingSlots;let i = index;">
+            <a (click)="booking(parkingSlots[i]);open(content)">
+                <div class=" search__box--outline" [ngClass]="{'sold': slot.availabilityStatus === 'NOT_AVAILABLE'}">
+                    <h1>{{slot.slotNumber}}</h1>
+                    <h2>{{slot.parkingType}}</h2>
+                    <div class="search__box--status " [ngClass]="{'sold-bdr': slot.availabilityStatus === 'NOT_AVAILABLE'}">
+                        <h1>{{slot.availabilityStatus}}</h1>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+
+    <ng-template #content let-c="close " let-d="dismiss">
+        <!--<pre>{{clickedSlot | json}}</pre>-->
+        <div class="modal-header ">
+            <div class="commonHeading ">
+                <h1>BOOKING AS ON {{date.availabilityDate}}</h1>
+                <h2></h2>
+            </div>
+            <button type="button " class="close closePop" aria-label="Close " (click)="d( 'Cross click')">
+      <span aria-hidden="true ">&times;</span>
+    </button>
+        </div>
+        <div class="modal-body ">
+            <div class="publishParking ">
+                <label>Parking Slot Number :</label>
+                <h1>{{clickedSlot.slotNumber}}</h1>
+                <label>Parking Type : </label>
+                <h1>{{clickedSlot.parkingType}}</h1>
+            </div>
+            <!--<div class="publishParking__action ">
+                <button type="button " (click)="selectDate( 'today') ">Today</button>
+                <button type="button " (click)="selectDate( 'tomorrow') ">Tomorrow</button>
+            </div>-->
+
+            <div class="publishParking__slots ">
+                <label>Select Slots :</label>
+                <div class="publishParking__slots--inputs " *ngFor="let item of clickedSlot['slotTimings'];let i = index;">
+
+                    <input type="checkbox" name="slots-{{i}}" [disabled]="item.availabilityStatus === 'NOT_AVAILABLE' || item.availabilityStatus === 'BOOKED'" (change)="selectedSlots($event,item.availabilityID)"><span>{{item.name}}</span>
+                </div>
+            </div>
+            <div class="publishParking__amount">
+
+                <h1><i class="fa fa-inr" aria-hidden="true"></i>{{totalamount}}</h1>
+            </div>
+            <div class="publishParking__pay">
+                <button type="button " (click)="confirmBook()">PAY</button>
+            </div>
+        </div>
+        <!--<div class="modal-footer ">
+            <button type="button " class="btn btn-secondary " (click)="c( 'Close click') ">Close</button>
+        </div>-->
+    </ng-template>
+
+
+</section>

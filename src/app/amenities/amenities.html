@@ -1,0 +1,61 @@
+<section class="amenities">
+    <div class="commonHeading">
+        <h1>Book amenities</h1>
+        <h2></h2>
+    </div>
+
+    <section class="amenities__container row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+            <div class="amenities__box" (click)="open(content,'AMENITIES')">
+                <img src="../../assets/images/amenities.png" />
+                <h1>Book amenities</h1>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+            <div class="amenities__box" (click)="open(content,'HALL')">
+                <img src="../../assets/images/Banquet_Halls.png" />
+                <h1>Book Party Hall</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <ng-template #content let-c="close " let-d="dismiss">
+        <!--<pre>{{clickedSlot | json}}</pre>-->
+        <div class="modal-header ">
+            <div class="commonHeading">
+                <h1>BOOKING amenities</h1>
+                <h2></h2>
+            </div>
+            <button type="button " class="close closePop" aria-label="Close " (click)="d( 'Cross click')">
+      <span aria-hidden="true ">&times;</span>
+    </button>
+        </div>
+        <div class="modal-body ">
+            <section class="amenities__pop">
+                <div class="amenities__pop--fields">
+                    <label>Enter Guest Name</label>
+                    <input type="text" [(ngModel)]="amenitiesDetails.visitor_name" />
+                </div>
+                <div class="amenities__pop--fields">
+                    <label>Enter Guest Mobile Number</label>
+                    <input type="number" [(ngModel)]="amenitiesDetails.visitor_nunber" />
+                </div>
+                <div class="amenities__pop--fields">
+                    <h3>*Please note the pass is valid for one day and for one user only</h3>
+                    <h3>*This pass can be used for all AMENITIES in society</h3>
+                    <h1>Total Amount</h1>
+                    <h2><i class="fa fa-inr" aria-hidden="true"></i>150</h2>
+                </div>
+                <div class="amenities__pop--action">
+                    <button type="submit" (click)="bookAmenities()">PAY</button>
+                </div>
+            </section>
+        </div>
+        <!--<div class="modal-footer ">
+            <button type="button " class="btn btn-secondary " (click)="c( 'Close click') ">Close</button>
+        </div>-->
+    </ng-template>
+
+
+</section>

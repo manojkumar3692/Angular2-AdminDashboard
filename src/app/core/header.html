@@ -1,0 +1,15 @@
+<section class="header row" *ngIf="roleID != 'anonymous'" [ngClass]="{'adminHeader': roleID === 'ADMIN'}">
+    <div class="header__left col-xs-6 col-sm-6 col-lg-6 col-md-6 header__left">
+        <button type="button" id="toggleMenu" class="toggle_menu" (click)="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+        <h1>Society Connect</h1>
+    </div>
+    <div class="header__right col-xs-6 col-sm-6 col-lg-6 col-md-6 header__right">
+        <ul>
+            <li><a (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                <h1>Logout</h1></a>
+            </li>
+        </ul>
+    </div>
+</section>

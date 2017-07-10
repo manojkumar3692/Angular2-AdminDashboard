@@ -1,0 +1,31 @@
+<section class="noticeView">
+    <div class="commonHeadingAdmin">
+        <h1>View Complain</h1>
+        <h2></h2>
+    </div>
+    <!--<pre>{{allComplaint | json}}</pre>-->
+    <section class="noticeView__contaier row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 noticeView__div" *ngFor="let each of allComplaint">
+
+            <div class="noticeView__box">
+                <h1><span>Raised On : {{each.complaint_date | date}}</span>Title Displayed Here</h1>
+                <div class="row viewLabelContainer">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding">
+                        <label class="viewLabel">Raised By : {{each.name}}</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <label class="viewLabel">Flat No : {{each.flatNo}}</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 noPadding">
+                        <label class="viewLabel">Phone No : {{each.phoneNumber}}</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <label class="viewLabel">Block No : {{each.blockNo}}</label>
+                    </div>
+                </div>
+                <p>{{each.complaint_text}}</p>
+            </div>
+
+        </div>
+    </section>
+</section>

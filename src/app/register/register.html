@@ -1,0 +1,63 @@
+<section class="register">
+    <div class="commonHeadingAdmin">
+        <h1>Create a owner</h1>
+        <h2></h2>
+    </div>
+    <form (ngSubmit)="registerUser(register)" #register="ngForm">
+        <div class="register__container row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Flat No :</label>
+                <input placeholder="enter Flat Number" ngModel name="flatno" #flatno="ngModel">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Block Name :</label>
+                <input placeholder="enter block Name" ngModel name="block" #block="ngModel">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Name :</label>
+                <input placeholder="enter your Name" ngModel name="name" #name="ngModel">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Number :</label>
+                <input placeholder="enter your number" ngModel name="number" #number="ngModel">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Password :</label>
+                <input placeholder="enter your password" ngModel name="password" #password="ngModel">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 register__container--components">
+                <label>Resident Id :</label>
+                <input placeholder="enter your resident ID" ngModel name="residentID" #residentID="ngModel">
+            </div>
+        </div>
+        <div class="commonHeadingAdmin">
+            <h1>parking slot</h1>
+            <h2></h2>
+        </div>
+        <div class="register__parking row">
+            <div class="register__parkingContainer col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngFor="let parking of parkingSlotDetails;let lastItem = last ;let i=index">
+                <div class="register__parkingContainer--box">
+                    <label>Parking Type :</label>
+                    <select name="parkingType-{{i}}" [(ngModel)]="parking.parkingType">
+                <option disabled>SelectType</option>
+                <option>Open</option>
+                <option>Closed</option>
+            </select>
+                    <label>Parking No :</label>
+                    <input placeholder="enter parking slot Number" name="slotNumber-{{i}}" [(ngModel)]="parking.slotNumber">
+                    <a class="register__parkingContainer--close" *ngIf="lastItem" (click)="removeParkingSlot()"><i class="fa fa-minus-square-o" aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="register__parkingContainer--add">
+            <button type="button" (click)="addParkingSlot()">add more</button>
+            <button type="submit">Register</button>
+        </div>
+        <div>
+
+        </div>
+
+
+    </form>
+</section>

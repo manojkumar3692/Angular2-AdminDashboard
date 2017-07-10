@@ -1,0 +1,66 @@
+<section class="myparking">
+    <div class="commonHeading">
+        <h1>All Parking</h1>
+        <h2></h2>
+    </div>
+    <div class="loadText" *ngIf="status === true">Loading ..</div>
+    <div class="myparking__container row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let item of parkingDetails;let i = index">
+            <div class="myparking__box">
+                <label>Parking Type :</label>
+                <h1>{{item.parkingType}}</h1>
+                <label>Parking Number :</label>
+                <h1>{{item.slotNumber}}</h1>
+                <h2><a (click)="open(content,parkingDetails[i])">publish</a></h2>
+                <div class="myparking__box--icon">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <ng-template #content let-c="close" let-d="dismiss">
+
+        <div class="modal-header">
+            <div class="commonHeading">
+                <h1>Publish Parking Slot</h1>
+                <h2></h2>
+            </div>
+            <button type="button" class="close closePop" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+        </div>
+        <div class="modal-body">
+            <div class="publishParking">
+                <label>Parking Slot Number :</label>
+                <h1>{{publishDetails.slotNumber}}</h1>
+                <label>Parking Type : </label>
+                <h1>{{publishDetails.parkingType}}</h1>
+            </div>
+            <div class="publishParking__action">
+                <button type="button" (click)="selectDate('today')" [ngClass]="{'activeDate': day === 'today'}">Today</button>
+                <button type="button" (click)="selectDate('tomorrow')" [ngClass]="{'activeDate': day === 'tomorrow'}">Tomorrow</button>
+            </div>
+
+            <div class="publishParking__slots">
+                <!--<pre>{{slots | json}}</pre>-->
+                <label>Select Slots :</label>
+                <div *ngIf="slots?.length === 0">loading ...</div>
+                <div class="publishParking__slots--inputs" *ngFor="let slot of slots;let i = index">
+                    <input type="checkbox" name="slots--{{i}}" [checked]="slot.availabilityStatus === 'AVAILABLE'" (change)="checkedSlots($event,slot)" [disabled]="slot.availabilityStatus === 'BOOKED'"><span>{{slot.name}}</span><span *ngIf="slot.availabilityStatus === 'BOOKED'"><--Booked--></span>
+                </div>
+            </div>
+            <div class="register__parkingContainer--add">
+                <button type="button" (click)="publish()">Publish</button>
+            </div>
+        </div>
+        <!--<div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+        </div>-->
+    </ng-template>
+
+
+</section>

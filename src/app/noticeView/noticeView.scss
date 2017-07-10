@@ -1,0 +1,39 @@
+@import '../../assets/css/_attribute.scss';
+.noticeView {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__container {}
+    &__div {
+        padding: 2rem 0rem;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    &__box {
+        padding: 1rem;
+        border: 1px solid $primaryColor;
+        h1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 1px solid $primaryColor;
+            padding-bottom: 8px;
+            position: relative;
+            span {
+                position: absolute;
+                right: 0;
+                color: $primaryColor;
+                font-size: 10px;
+                font-weight: 300;
+                top: -1px;
+            }
+        }
+        p {
+            font-size: 12px;
+            font-weight: 300;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    padding: 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}

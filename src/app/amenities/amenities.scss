@@ -1,0 +1,84 @@
+@import '../../assets/css/_attribute.scss';
+.amenities {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    .commonHeadingParking {
+        padding: 1rem 0rem;
+    }
+    &__container {}
+    &__box {
+        padding: 1rem;
+        border: 1px solid $primaryColor;
+        text-align: center;
+        height: 200px;
+        cursor: pointer;
+        img {
+            width: 100px;
+            margin-top: 1rem;
+        }
+        h1 {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            color: green;
+        }
+    }
+    &__pop {
+        font-family: 'Montserrat', sans-serif;
+        &--fields {
+            margin-bottom: 10px;
+            label {
+                width: 100%;
+                font-size: 12px;
+                margin: 0;
+            }
+            input {
+                width: 100%;
+            }
+            h1 {
+                font-size: 14px;
+                text-align: center;
+                margin: 10px 0px 8px;
+                text-transform: uppercase;
+            }
+            h2 {
+                font-size: 14px;
+                text-align: center;
+            }
+            h3 {
+                font-size: 10px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+        &--action {
+            text-align: center;
+            button {
+                margin: 0px 5px;
+                width: 100px;
+                height: 27px;
+                border: none;
+                background-color: $primaryColor;
+                border-radius: 12px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 300;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                &:hover {
+                    border: none;
+                    color: #fff;
+                    background-color: $primaryFontColor;
+                }
+            }
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    padding: 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}

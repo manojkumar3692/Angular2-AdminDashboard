@@ -1,0 +1,48 @@
+@import '../../assets/css/_attribute.scss';
+.notice {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__container {}
+    &__fields {
+        margin-bottom: 2rem;
+        label {
+            margin: 0;
+            width: 100%;
+        }
+        input,
+        textarea {
+            font-size: 12px;
+            padding: 15px 0px 15px 5px;
+            width: 100%;
+            border: 1px solid #eb7475;
+            margin-top: 10px;
+        }
+    }
+    &__action {
+        button {
+            margin: 0px 5px;
+            width: 100px;
+            height: 27px;
+            border: none;
+            background-color: $primaryFontColor;
+            color: #fff;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                border: none;
+                color: #fff;
+                background-color: $primaryColor;
+            }
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    padding: 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}

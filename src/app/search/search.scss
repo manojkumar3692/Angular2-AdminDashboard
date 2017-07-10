@@ -1,0 +1,177 @@
+@import '../../assets/css/_attribute.scss';
+.search {
+    .activeDate {
+        background-color: $primaryColor;
+        color: #fff;
+        border: none;
+    }
+    padding: 0rem 2rem;
+    font-family: 'Montserrat',
+    sans-serif;
+    &__box {
+        margin: 1rem 0rem;
+        &--outline {
+            border: 1px solid $primaryColor;
+            text-align: center;
+            border-radius: 5px;
+            padding: 1rem 0rem 0rem;
+            h1 {
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 5px;
+            }
+            h2 {
+                font-size: 18px;
+                padding-bottom: 1rem;
+            }
+        }
+        &--status {
+            text-align: center;
+            border-top: 1px solid $primaryColor;
+            // border-bottom: 1px solid #cecece;
+            padding: 10px 0px;
+            h1 {
+                font-size: 14px;
+                margin: 0;
+                font-weight: 300;
+            }
+        }
+    }
+    &__action {
+        margin: 15px 0px;
+        width: 100%;
+        padding-left: 10px;
+        button {
+            margin: 0px 5px;
+            width: 100px;
+            height: 27px;
+            border: 1px solid #999;
+            background-color: #fff;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                border: none;
+                color: #fff;
+                background-color: $primaryColor;
+            }
+        }
+    }
+}
+
+.publishParking {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #999;
+    font-family: 'Montserrat', sans-serif;
+    label {
+        margin: 0;
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    h1 {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    &__amount {
+        margin: 1rem 0;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        h1 {
+            font-size: 24px;
+            i {
+                font-size: 24px;
+                margin-right: 5px;
+                color: $primaryColor;
+            }
+        }
+    }
+    &__pay {
+        text-align: center;
+        margin: 15px 0px;
+        button {
+            margin: 0px 5px;
+            width: 100px;
+            height: 27px;
+            border: none;
+            background-color: $primaryColor;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            &:hover {
+                border: none;
+                color: #fff;
+                background-color: $primaryFontColor;
+            }
+        }
+    }
+    &__action {
+        text-align: center;
+        margin: 15px 0px;
+        button {
+            margin: 0px 5px;
+            width: 100px;
+            height: 27px;
+            border: 1px solid #999;
+            background-color: #fff;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                border: none;
+                color: #fff;
+                background-color: $primaryColor;
+            }
+        }
+    }
+    &__slots {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 1rem 0;
+        label {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &--inputs {
+            width: 100%;
+            span {
+                margin-left: 1rem;
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    padding: 1rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.closePop {
+    position: relative;
+    bottom: 30px;
+}
+
+.sold {
+    border: 1px solid red !important;
+}
+
+.sold-bdr {
+    border-top: 1px solid red !important;
+}

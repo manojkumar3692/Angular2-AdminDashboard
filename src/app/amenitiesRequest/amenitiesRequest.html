@@ -1,0 +1,43 @@
+<section class="amenitiesRequest">
+    <div class="commonHeadingAdmin">
+        <h1>View Request</h1>
+        <h2></h2>
+    </div>
+    <!--<div class="amenitiesRequest__search">
+        <label>Search :</label>
+        <input type="text" placeholder="search by booking ID" [ngModel]="searchString">
+    </div>-->
+    <!--<pre>{{requestDetails | json}}</pre>-->
+    <section class="amenitiesRequest__container row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 amenitiesRequest__container--separate" *ngFor="let item of requestDetails">
+
+            <div class="amenitiesRequest__box">
+                <div class="amenitiesRequest__box--fields">
+                    <label>Booking ID :</label>
+                    <h1>{{item.booking_id}}</h1>
+                </div>
+                <div class="amenitiesRequest__box--fields">
+                    <label>Booked By :</label>
+                    <h1>{{item.name}}</h1>
+                </div>
+                <div class="amenitiesRequest__box--fields">
+                    <label>Phone Number :</label>
+                    <h1>{{item.phoneNumber}}</h1>
+                </div>
+                <div class="amenitiesRequest__box--fields">
+                    <label>Booking Type :</label>
+                    <h1>{{item.booking_type}}</h1>
+                </div>
+                <div class="amenitiesRequest__box--fields">
+                    <label>STATUS :</label>
+                    <h1>{{item.booking_status}}</h1>
+                </div>
+                <div class="amenitiesRequest__box--fields">
+                    <label>Booked Date :</label>
+                    <h1>{{item.booked_for_date | date:'fullDate'}}</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</section>

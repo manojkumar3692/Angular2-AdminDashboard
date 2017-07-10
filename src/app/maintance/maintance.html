@@ -1,0 +1,56 @@
+<section class="maintance">
+    <div class="commonHeadingAdmin">
+        <h1>Monthly Maintance</h1>
+        <h2></h2>
+    </div>
+
+    <section class="dashboard__metric row">
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <div class="dashboard__box--color">
+                </div>
+                <h1>59</h1>
+                <h2>Total Owners</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>39</h1>
+                <h2>Total Paid</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>20</h1>
+                <h2>Total Not Paid</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+
+            <div class="dashboard__box">
+                <h1>21,000</h1>
+                <h2>Total Payment</h2>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="maintance__container">
+
+        <div class="viewOwner__container">
+            <ng2-smart-table [settings]="tableSetting" [source]="maintanceList">
+
+            </ng2-smart-table>
+        </div>
+
+    </section>
+
+</section>

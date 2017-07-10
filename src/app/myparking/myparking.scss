@@ -1,0 +1,125 @@
+@import '../../assets/css/_attribute.scss';
+@import '../register/register.scss';
+.myparking {
+    padding: 0rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    &__container {}
+    &__box {
+        padding: 10px;
+        border: 1px solid $primaryColor;
+        position: relative;
+        label {
+            margin: 0;
+            display: block;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        h1 {
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 12px;
+            text-align: right;
+            text-transform: uppercase;
+            a {
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+        &--icon {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            i {
+                font-size: 20px;
+                color: $primaryColor;
+                &:hover {
+                    color: $primaryFontColor;
+                }
+            }
+        }
+    }
+}
+
+.publishParking .modal-body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.publishParking {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #999;
+    font-family: 'Montserrat', sans-serif;
+    label {
+        margin: 0;
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    h1 {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    &__action {
+        text-align: center;
+        margin: 15px 0px;
+        button {
+            margin: 0px 5px;
+            width: 100px;
+            height: 27px;
+            border: 1px solid #999;
+            background-color: #fff;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                border: none;
+                color: #fff;
+                background-color: $primaryColor;
+            }
+        }
+    }
+    &__slots {
+        font-family: 'Montserrat', sans-serif !important;
+        label {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &--inputs {
+            width: 100%;
+            span {
+                margin-left: 1rem;
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.modal-header .commonHeading {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 1rem 0rem;
+}
+
+.modal-header .publishParking {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.closePop {
+    position: relative;
+    bottom: 30px;
+}
+
+.activeDate {
+    background-color: $primaryColor !important;
+    color: #fff !important;
+    border: none !important;
+}

@@ -1,0 +1,15 @@
+<section class="viewOwner">
+    <div class="commonHeadingAdmin">
+        <h1>View All Owner</h1>
+        <h2></h2>
+    </div>
+    <!--<div class="commonSearch">
+        <input placeholder="search here" (keydown.enter)="searchTable(keys.value)" #keys>
+    </div>-->
+
+    <div class="viewOwner__container">
+        <ng2-smart-table [settings]="tableSetting" [source]="allOwnerDetails" (edit)="editOwner($event)" (delete)="deleteOwner($event)">
+
+        </ng2-smart-table>
+    </div>
+</section>
