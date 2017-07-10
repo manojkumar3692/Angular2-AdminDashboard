@@ -6,6 +6,7 @@
         height: 100%;
         background-image: url('../../assets/images/bg.jpg');
         background-size: cover;
+        position: relative;
         &__container {
             width: 350px;
             margin: 0 auto;
@@ -59,6 +60,21 @@
                     border: none;
                     color: #fff;
                     background-color: $primaryFontColor;
+                }
+            }
+        }
+        .userInfo {
+            position: absolute;
+            top: -2.3rem;
+            width: 100%;
+            border-bottom: 1px solid #999;
+            padding-bottom: 12px;
+            ul {
+                li {
+                    display: inline-block;
+                    font-size: 12px;
+                    margin-right: 1rem;
+                    font-family: 'Montserrat', sans-serif;
                 }
             }
         }

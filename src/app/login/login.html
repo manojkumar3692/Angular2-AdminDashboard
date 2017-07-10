@@ -5,7 +5,7 @@
         </div>
         <form (ngSubmit)="loginUser(login)" #login="ngForm">
             <div class="login__container--fields">
-                <label>Enter you resident ID</label>
+                <label>Enter you resident ID/ADMIN</label>
                 <input placeholder="enter resident ID" ngModel name="residentID" #residentID="ngModel">
             </div>
             <div class="login__container--fields">
@@ -16,5 +16,19 @@
                 <button>Login</button>
             </div>
         </form>
+    </div>
+    <div class="userInfo row">
+        <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+            <ul>
+                <li>Admin-Username: admin</li>
+                <li>Admin Password : admin</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+            <ul>
+                <li>Resident-Username: A001</li>
+                <li>Resident Password : open@A001</li>
+            </ul>
+        </div>
     </div>
 </section>
